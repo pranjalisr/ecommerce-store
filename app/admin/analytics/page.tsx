@@ -89,7 +89,7 @@ export default function AnalyticsPage() {
               </div>
             </CardHeader>
             <CardContent>
-              <div className="text-3xl font-bold text-gray-900">${currentMonth.revenue.toLocaleString()}</div>
+              <div className="text-3xl font-bold text-gray-900">{currentMonth.revenue.toLocaleString()}</div>
               <div className="flex items-center text-sm mt-2">
                 <TrendingUp className="h-4 w-4 mr-1 text-green-500" />
                 <span className="text-green-600 font-medium">+{revenueGrowth}%</span>
@@ -203,7 +203,7 @@ export default function AnalyticsPage() {
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="font-semibold text-sm text-gray-900">${product.revenue.toLocaleString()}</div>
+                      <div className="font-semibold text-sm text-gray-900">{product.revenue.toLocaleString()}</div>
                       <div className="flex items-center text-xs">
                         {product.trend === "up" ? (
                           <TrendingUp className="h-3 w-3 text-green-500 mr-1" />

@@ -180,8 +180,8 @@ export default function HomePage() {
                         {product.tag}
                       </Badge>
                       <div className="text-right">
-                        <div className="text-2xl font-bold text-gray-900">${product.price}</div>
-                        <div className="text-sm text-gray-500 line-through">${product.originalPrice}</div>
+                        <div className="text-2xl font-bold text-gray-900">{product.price}</div>
+                        <div className="text-sm text-gray-500 line-through">{product.originalPrice}</div>
                       </div>
                     </div>
 
