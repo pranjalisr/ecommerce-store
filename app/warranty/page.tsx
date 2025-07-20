@@ -244,7 +244,7 @@ export default function WarrantyPage() {
                   <h3 className="text-lg font-bold text-gray-900 mb-2">Phone Support</h3>
                   <p className="text-gray-600 mb-4">Speak directly with a warranty specialist</p>
                   <p className="font-semibold text-gray-900 mb-2">1-800-TECH-HELP</p>
-                  <Badge variant="outline">Mon-Fri 8AM-8PM EST</Badge>
+                  <Badge variant="outline">Mon-Fri 8AM-8PM IST</Badge>
                 </div>
 
                 <div className="text-center">

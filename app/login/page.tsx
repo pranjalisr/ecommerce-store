@@ -25,7 +25,7 @@ export default function LoginPage() {
     e.preventDefault()
     setIsLoading(true)
 
-    // Simulate API call
+    // To Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000))
 
     console.log("Login attempt:", formData)

@@ -41,7 +41,7 @@ export default function RegisterPage() {
 
     setIsLoading(true)
 
-    // Simulate API call
+    // To Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000))
 
     console.log("Registration attempt:", formData)
@@ -71,7 +71,7 @@ export default function RegisterPage() {
                       id="firstName"
                       value={formData.firstName}
                       onChange={(e) => setFormData((prev) => ({ ...prev, firstName: e.target.value }))}
-                      placeholder="John"
+                      placeholder="First Name"
                       className="pl-10"
                       required
                     />
@@ -83,7 +83,7 @@ export default function RegisterPage() {
                     id="lastName"
                     value={formData.lastName}
                     onChange={(e) => setFormData((prev) => ({ ...prev, lastName: e.target.value }))}
-                    placeholder="Doe"
+                    placeholder="Last Name"
                     required
                   />
                 </div>
@@ -98,7 +98,7 @@ export default function RegisterPage() {
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
-                    placeholder="john@example.com"
+                    placeholder="mail@example.com"
                     className="pl-10"
                     required
                   />

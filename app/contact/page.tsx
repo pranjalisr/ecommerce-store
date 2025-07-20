@@ -8,13 +8,13 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Visit Our Store",
-    details: ["123 Tech Street", "San Francisco, CA 94105", "United States"],
+    details: ["123 ChurchStreet", "Bangalore, KA 94105", "India"],
     gradient: "from-blue-500 to-cyan-600",
   },
   {
     icon: Phone,
     title: "Call Us",
-    details: ["+1 (555) 123-4567", "Toll-free: 1-800-TECH-STORE", "International: +1 (555) 987-6543"],
+    details: ["+91 5551234567", "Toll-free: 1-800-TECH-STORE", "International: +1 (555) 987-6543"],
     gradient: "from-green-500 to-emerald-600",
   },
   {
@@ -37,28 +37,28 @@ const departments = [
     title: "Sales",
     description: "Product inquiries and purchasing help",
     email: "sales@techstore.com",
-    phone: "+1 (555) 123-4567",
+    phone: "+91 5551234567",
   },
   {
     icon: "🔧",
     title: "Technical Support",
     description: "Product setup and troubleshooting",
     email: "support@techstore.com",
-    phone: "+1 (555) 234-5678",
+    phone: "+91 5552345678",
   },
   {
     icon: "📦",
     title: "Orders & Shipping",
     description: "Order status and delivery questions",
     email: "orders@techstore.com",
-    phone: "+1 (555) 345-6789",
+    phone: "+91 5553456789",
   },
   {
     icon: "🤝",
     title: "Partnerships",
     description: "Business partnerships and wholesale",
     email: "partnerships@techstore.com",
-    phone: "+1 (555) 456-7890",
+    phone: "+91 5554567890",
   },
 ]
 
@@ -74,7 +74,7 @@ export default function ContactPage() {
               We'd love to hear from you. Send us a message and we'll respond as soon as possible.
             </p>
             <div className="flex items-center justify-center gap-6 text-sm">
-              <div className="bg-white/20 px-4 py-2 rounded-full">📍 San Francisco, CA</div>
+              <div className="bg-white/20 px-4 py-2 rounded-full">📍 Bangalore, KA</div>
               <div className="bg-white/20 px-4 py-2 rounded-full">📞 24/7 Support</div>
               <div className="bg-white/20 px-4 py-2 rounded-full">✉️ Quick Response</div>
             </div>
@@ -196,20 +196,20 @@ export default function ContactPage() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                      <Input placeholder="John" />
+                      <Input placeholder="First Name" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                      <Input placeholder="Doe" />
+                      <Input placeholder="Last Name" />
                     </div>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <Input type="email" placeholder="john@example.com" />
+                    <Input type="email" placeholder="name@example.com" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Phone (Optional)</label>
-                    <Input type="tel" placeholder="+1 (555) 123-4567" />
+                    <Input type="tel" placeholder="" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>

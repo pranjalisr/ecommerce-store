@@ -8,8 +8,8 @@ const flashDeals = [
   {
     id: 1,
     name: "AirPods Pro Max",
-    price: 449,
-    originalPrice: 599,
+    price: 1449,
+    originalPrice: 1599,
     emoji: "🎧",
     image: "/placeholder.svg?height=300&width=300",
     rating: 4.8,
@@ -21,8 +21,8 @@ const flashDeals = [
   {
     id: 2,
     name: "iPhone 15 Pro",
-    price: 899,
-    originalPrice: 1099,
+    price: 120899,
+    originalPrice: 141099,
     emoji: "📱",
     image: "/placeholder.svg?height=300&width=300",
     rating: 4.7,
@@ -34,8 +34,8 @@ const flashDeals = [
   {
     id: 3,
     name: "MacBook Air M3",
-    price: 999,
-    originalPrice: 1299,
+    price: 444999,
+    originalPrice: 456299,
     emoji: "💻",
     image: "/placeholder.svg?height=300&width=300",
     rating: 4.9,
@@ -50,8 +50,8 @@ const weeklyDeals = [
   {
     id: 4,
     name: "Sony WH-1000XM5",
-    price: 299,
-    originalPrice: 399,
+    price: 1299,
+    originalPrice: 1399,
     emoji: "🎵",
     image: "/placeholder.svg?height=300&width=300",
     rating: 4.6,
@@ -61,8 +61,8 @@ const weeklyDeals = [
   {
     id: 5,
     name: "Samsung Galaxy S24",
-    price: 699,
-    originalPrice: 899,
+    price: 1699,
+    originalPrice: 1899,
     emoji: "📱",
     image: "/placeholder.svg?height=300&width=300",
     rating: 4.5,
@@ -72,8 +72,8 @@ const weeklyDeals = [
   {
     id: 6,
     name: "iPad Pro 12.9",
-    price: 899,
-    originalPrice: 1199,
+    price: 1899,
+    originalPrice: 1999,
     emoji: "📱",
     image: "/placeholder.svg?height=300&width=300",
     rating: 4.8,
@@ -156,10 +156,10 @@ export default function DealsPage() {
                   </div>
 
                   <div className="flex items-center gap-2 mb-4">
-                    <span className="text-2xl font-bold text-red-600">${deal.price}</span>
-                    <span className="text-lg text-gray-500 line-through">${deal.originalPrice}</span>
+                    <span className="text-2xl font-bold text-red-600">{deal.price}</span>
+                    <span className="text-lg text-gray-500 line-through">{deal.originalPrice}</span>
                     <Badge variant="destructive" className="text-xs">
-                      Save ${deal.originalPrice - deal.price}
+                      Save {deal.originalPrice - deal.price}
                     </Badge>
                   </div>
 
@@ -235,10 +235,10 @@ export default function DealsPage() {
                   </div>
 
                   <div className="flex items-center gap-2 mb-6">
-                    <span className="text-2xl font-bold text-purple-600">${deal.price}</span>
-                    <span className="text-lg text-gray-500 line-through">${deal.originalPrice}</span>
+                    <span className="text-2xl font-bold text-purple-600">{deal.price}</span>
+                    <span className="text-lg text-gray-500 line-through">{deal.originalPrice}</span>
                     <Badge className="bg-purple-100 text-purple-800 hover:bg-purple-100 text-xs">
-                      Save ${deal.originalPrice - deal.price}
+                      Save {deal.originalPrice - deal.price}
                     </Badge>
                   </div>
 

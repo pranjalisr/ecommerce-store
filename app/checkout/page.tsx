@@ -44,25 +44,25 @@ export default function CheckoutPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="firstName">First Name</Label>
-                    <Input id="firstName" placeholder="John" />
+                    <Input id="firstName" placeholder="First Name" />
                   </div>
                   <div>
                     <Label htmlFor="lastName">Last Name</Label>
-                    <Input id="lastName" placeholder="Doe" />
+                    <Input id="lastName" placeholder="Last Name" />
                   </div>
                 </div>
                 <div>
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="john@example.com" />
+                  <Input id="email" type="email" placeholder="mail@example.com" />
                 </div>
                 <div>
                   <Label htmlFor="address">Address</Label>
-                  <Input id="address" placeholder="123 Main St" />
+                  <Input id="address" placeholder="123 Colony" />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="city">City</Label>
-                    <Input id="city" placeholder="New York" />
+                    <Input id="city" placeholder="New Delhi" />
                   </div>
                   <div>
                     <Label htmlFor="zipCode">ZIP Code</Label>
@@ -110,7 +110,7 @@ export default function CheckoutPage() {
                     </div>
                     <div>
                       <Label htmlFor="cardName">Name on Card</Label>
-                      <Input id="cardName" placeholder="John Doe" />
+                      <Input id="cardName" placeholder="RIYA" />
                     </div>
                   </div>
                 )}
@@ -130,26 +130,26 @@ export default function CheckoutPage() {
                     <span>
                       {item.name} × {item.quantity}
                     </span>
-                    <span>${(item.price * item.quantity).toFixed(2)}</span>
+                    <span>{(item.price * item.quantity).toFixed(2)}</span>
                   </div>
                 ))}
                 <Separator />
                 <div className="flex justify-between">
                   <span>Subtotal</span>
-                  <span>${subtotal.toFixed(2)}</span>
+                  <span>{subtotal.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Shipping</span>
-                  <span>${shipping.toFixed(2)}</span>
+                  <span>{shipping.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Tax</span>
-                  <span>${tax.toFixed(2)}</span>
+                  <span>{tax.toFixed(2)}</span>
                 </div>
                 <Separator />
                 <div className="flex justify-between font-semibold text-lg">
                   <span>Total</span>
-                  <span>${total.toFixed(2)}</span>
+                  <span>{total.toFixed(2)}</span>
                 </div>
 
                 <div className="space-y-4 pt-4">
@@ -162,7 +162,7 @@ export default function CheckoutPage() {
 
                   <Button className="w-full" size="lg">
                     <Shield className="w-4 h-4 mr-2" />
-                    Place Order - ${total.toFixed(2)}
+                    Place Order - {total.toFixed(2)}
                   </Button>
 
                   <p className="text-xs text-gray-500 text-center">Your payment information is secure and encrypted</p>

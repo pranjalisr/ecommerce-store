@@ -26,7 +26,7 @@ const products = [
     id: 2,
     name: "Smart Watch",
     category: "Electronics",
-    price: 199.99,
+    price: 199,
     stock: 23,
     status: "Active",
     emoji: "⌚",
@@ -37,7 +37,7 @@ const products = [
     id: 3,
     name: "Laptop Stand",
     category: "Accessories",
-    price: 49.99,
+    price: 499,
     stock: 0,
     status: "Out of Stock",
     emoji: "🖥️",
@@ -59,7 +59,7 @@ const products = [
     id: 5,
     name: "USB-C Hub",
     category: "Accessories",
-    price: 29.99,
+    price: 29,
     stock: 12,
     status: "Low Stock",
     emoji: "🔌",
@@ -180,7 +180,7 @@ export default function ProductsPage() {
                       </div>
                     </TableCell>
                     <TableCell>{product.category}</TableCell>
-                    <TableCell>${product.price}</TableCell>
+                    <TableCell>{product.price}</TableCell>
                     <TableCell>{product.stock}</TableCell>
                     <TableCell>
                       <Badge

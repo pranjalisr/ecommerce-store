@@ -7,7 +7,7 @@ import Link from "next/link"
 const stats = [
   {
     title: "Total Revenue",
-    value: "$124,350",
+    value: "99L",
     change: "+12.5%",
     icon: DollarSign,
     color: "text-green-600",
@@ -15,7 +15,7 @@ const stats = [
   },
   {
     title: "Orders",
-    value: "1,234",
+    value: "98K",
     change: "+8.2%",
     icon: ShoppingCart,
     color: "text-blue-600",
@@ -23,7 +23,7 @@ const stats = [
   },
   {
     title: "Products",
-    value: "456",
+    value: "36K",
     change: "+3.1%",
     icon: Package,
     color: "text-purple-600",
@@ -31,7 +31,7 @@ const stats = [
   },
   {
     title: "Customers",
-    value: "2,345",
+    value: "188K",
     change: "+15.3%",
     icon: Users,
     color: "text-orange-600",
@@ -41,36 +41,36 @@ const stats = [
 
 const recentOrders = [
   {
-    id: "ORD-001",
-    customer: "John Doe",
+    id: "ORDER-001",
+    customer: "Anuj",
     product: "AirPods Pro Max",
-    amount: "$549.00",
+    amount: "43K",
     status: "Completed",
-    date: "2024-01-15",
+    date: "2025-01-15",
   },
   {
-    id: "ORD-002",
-    customer: "Jane Smith",
+    id: "ORDER-002",
+    customer: "Palak",
     product: 'MacBook Pro 16"',
-    amount: "$2,399.00",
+    amount: "20K",
     status: "Processing",
     date: "2024-01-14",
   },
   {
-    id: "ORD-003",
-    customer: "Mike Johnson",
+    id: "ORDER-003",
+    customer: "Soumya",
     product: "iPhone 15 Pro",
-    amount: "$999.00",
+    amount: "79K",
     status: "Shipped",
     date: "2024-01-13",
   },
   {
-    id: "ORD-004",
-    customer: "Sarah Wilson",
+    id: "ORDER-004",
+    customer: "Soham",
     product: "Sony WH-1000XM5",
-    amount: "$399.00",
+    amount: "32K",
     status: "Pending",
-    date: "2024-01-12",
+    date: "2025-01-12",
   },
 ]
 

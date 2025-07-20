@@ -8,13 +8,13 @@ const shippingOptions = [
     name: "Standard Shipping",
     price: "Free",
     time: "3-5 Business Days",
-    description: "Free shipping on orders over $50",
+    description: "Free shipping on orders over Rs 50",
     features: ["Order tracking", "Signature confirmation", "Insurance included"],
   },
   {
     icon: "⚡",
     name: "Express Shipping",
-    price: "$9.99",
+    price: "999",
     time: "1-2 Business Days",
     description: "Fast delivery for urgent orders",
     features: ["Priority handling", "Real-time tracking", "SMS notifications"],
@@ -22,7 +22,7 @@ const shippingOptions = [
   {
     icon: "🌟",
     name: "Overnight Shipping",
-    price: "$19.99",
+    price: "1999",
     time: "Next Business Day",
     description: "Get your order tomorrow",
     features: ["Guaranteed delivery", "Morning delivery", "Premium packaging"],
@@ -46,7 +46,7 @@ const policies = [
   {
     icon: Clock,
     title: "Cutoff Times",
-    description: "Orders placed before 2 PM EST ship the same day. Weekend orders ship on Monday.",
+    description: "Orders placed before 2 PM IST ship the same day. Weekend orders ship on Monday.",
   },
   {
     icon: MapPin,
@@ -56,7 +56,7 @@ const policies = [
   {
     icon: Shield,
     title: "Package Protection",
-    description: "All shipments include insurance and signature confirmation for orders over $100.",
+    description: "All shipments include insurance and signature confirmation for orders over Rs 100.",
   },
 ]
 
@@ -64,7 +64,7 @@ const faqs = [
   {
     question: "How much does shipping cost?",
     answer:
-      "Standard shipping is free on orders over $50. Express shipping is $9.99 and overnight is $19.99. International shipping costs vary by destination.",
+      "Standard shipping is free on orders over Rs 50. Express shipping is Rs 99 and overnight is Rs 199. International shipping costs vary by destination.",
   },
   {
     question: "How can I track my order?",
@@ -184,22 +184,22 @@ export default function ShippingPage() {
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="border-0 shadow-lg">
               <CardHeader className="text-center">
-                <div className="text-3xl mb-2">🇺🇸</div>
-                <CardTitle>United States</CardTitle>
+                <div className="text-3xl mb-2">🇮🇳</div>
+                <CardTitle>India</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span>Standard (3-5 days)</span>
-                    <span className="font-semibold">Free over $50</span>
+                    <span className="font-semibold">Free over Rs 50</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Express (1-2 days)</span>
-                    <span className="font-semibold">$9.99</span>
+                    <span className="font-semibold">Rs 99</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Overnight</span>
-                    <span className="font-semibold">$19.99</span>
+                    <span className="font-semibold">Rs 99</span>
                   </div>
                 </div>
               </CardContent>
@@ -207,17 +207,17 @@ export default function ShippingPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader className="text-center">
-                <div className="text-3xl mb-2">🇨🇦</div>
-                <CardTitle>Canada</CardTitle>
+                <div className="text-3xl mb-2">🇺🇸</div>
+                <CardTitle>USA</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span>Standard (5-7 days)</span>
+                    <span>Standard (15-17 days)</span>
                     <span className="font-semibold">$12.99</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Express (2-3 days)</span>
+                    <span>Express (12-13 days)</span>
                     <span className="font-semibold">$24.99</span>
                   </div>
                   <div className="flex justify-between">
@@ -236,11 +236,11 @@ export default function ShippingPage() {
               <CardContent>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span>Standard (7-15 days)</span>
+                    <span>Standard (17-25 days)</span>
                     <span className="font-semibold">$19.99+</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Express (3-7 days)</span>
+                    <span>Express (13-17 days)</span>
                     <span className="font-semibold">$39.99+</span>
                   </div>
                   <div className="flex justify-between">

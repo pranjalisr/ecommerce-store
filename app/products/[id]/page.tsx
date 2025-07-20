@@ -126,25 +126,25 @@ const products = [
 const reviews = [
   {
     id: 1,
-    user: "John D.",
+    user: "Sara",
     rating: 5,
-    date: "2024-01-15",
+    date: "2025-01-15",
     comment: "Amazing sound quality and comfort. The noise cancellation works perfectly!",
     verified: true,
   },
   {
     id: 2,
-    user: "Sarah M.",
+    user: "Mira",
     rating: 4,
-    date: "2024-01-10",
+    date: "2025-01-10",
     comment: "Great headphones, battery life is excellent. Only minor issue is they're a bit heavy for long sessions.",
     verified: true,
   },
   {
     id: 3,
-    user: "Mike R.",
+    user: "Maitry",
     rating: 5,
-    date: "2024-01-05",
+    date: "2025-01-05",
     comment: "Best purchase I've made this year. Sound quality is incredible and they're very comfortable.",
     verified: false,
   },
@@ -244,12 +244,12 @@ export default function ProductPage() {
             </div>
 
             <div className="flex items-center gap-4">
-              <span className="text-3xl font-bold text-green-600">${product.price}</span>
+              <span className="text-3xl font-bold text-green-600">{product.price}</span>
               {product.originalPrice > product.price && (
-                <span className="text-xl text-gray-500 line-through">${product.originalPrice}</span>
+                <span className="text-xl text-gray-500 line-through">{product.originalPrice}</span>
               )}
               {product.originalPrice > product.price && (
-                <Badge variant="destructive">Save ${(product.originalPrice - product.price).toFixed(2)}</Badge>
+                <Badge variant="destructive">Save {(product.originalPrice - product.price).toFixed(2)}</Badge>
               )}
             </div>
 
@@ -306,7 +306,7 @@ export default function ProductPage() {
                 <div className="flex gap-4">
                   <Button size="lg" className="flex-1">
                     <ShoppingCart className="w-5 h-5 mr-2" />
-                    Add to Cart - ${(product.price * quantity).toFixed(2)}
+                    Add to Cart - {(product.price * quantity).toFixed(2)}
                   </Button>
                   <Button variant="outline" size="lg">
                     <Heart className="w-5 h-5" />

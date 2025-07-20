@@ -25,12 +25,12 @@ const topProducts = [
 ]
 
 const recentActivity = [
-  { action: "New order #1234", time: "2 minutes ago", type: "order", amount: "$299.99" },
+  { action: "New order #1234", time: "2 minutes ago", type: "order", amount: "24K" },
   { action: "Customer registered", time: "5 minutes ago", type: "customer", amount: null },
   { action: "Product review added", time: "12 minutes ago", type: "review", amount: "5 stars" },
-  { action: "Payment received", time: "18 minutes ago", type: "payment", amount: "$1,299.00" },
-  { action: "New order #1233", time: "25 minutes ago", type: "order", amount: "$549.99" },
-  { action: "Refund processed", time: "32 minutes ago", type: "refund", amount: "$199.99" },
+  { action: "Payment received", time: "18 minutes ago", type: "payment", amount: "104k" },
+  { action: "New order #1233", time: "25 minutes ago", type: "order", amount: "44K" },
+  { action: "Refund processed", time: "32 minutes ago", type: "refund", amount: "16K" },
 ]
 
 const trafficSources = [

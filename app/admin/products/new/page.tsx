@@ -72,7 +72,7 @@ export default function NewProductPage() {
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000))
 
-    // In real app, this would make an API call to create the product
+    // make an API call to create the product
     console.log("Creating product:", formData)
 
     setIsSubmitting(false)
@@ -191,7 +191,7 @@ export default function NewProductPage() {
                   </div>
 
                   <div>
-                    <Label htmlFor="stock">Stock Quantity *</Label>
+                    <Label htmlFor="stock">Stock Quantity </Label>
                     <Input
                       id="stock"
                       type="number"

@@ -13,53 +13,53 @@ import { Search, MoreHorizontal, Eye, Edit, Package, Truck } from "lucide-react"
 const orders = [
   {
     id: "ORD-001",
-    customer: "John Doe",
-    email: "john@example.com",
+    customer: "Aman",
+    email: "aman@example.com",
     products: ["Wireless Headphones", "USB-C Cable"],
-    total: 129.98,
+    total: 199,
     status: "Completed",
-    date: "2024-01-15",
-    shippingAddress: "123 Main St, New York, NY 10001",
+    date: "2025-01-15",
+    shippingAddress: "123 Main Colony, Jaipur, Rajasthan 10001",
   },
   {
     id: "ORD-002",
-    customer: "Jane Smith",
-    email: "jane@example.com",
+    customer: "Anu",
+    email: "anu@example.com",
     products: ["Smart Watch", "Screen Protector"],
-    total: 219.98,
+    total: 299,
     status: "Processing",
-    date: "2024-01-14",
-    shippingAddress: "456 Oak Ave, Los Angeles, CA 90210",
+    date: "2025-01-14",
+    shippingAddress: "456 Oak Enclave, Chennai, TN 90210",
   },
   {
     id: "ORD-003",
-    customer: "Mike Johnson",
-    email: "mike@example.com",
+    customer: "Mira",
+    email: "mira@example.com",
     products: ["Laptop Stand"],
-    total: 49.99,
+    total: 499,
     status: "Shipped",
-    date: "2024-01-13",
-    shippingAddress: "789 Pine St, Chicago, IL 60601",
+    date: "2025-01-13",
+    shippingAddress: "789 Ashok Nagar, Hyderabad, TS 60601",
   },
   {
     id: "ORD-004",
-    customer: "Sarah Wilson",
-    email: "sarah@example.com",
+    customer: "Sara",
+    email: "sara@example.com",
     products: ["Bluetooth Speaker", "Carrying Case"],
-    total: 99.98,
+    total: 100,
     status: "Pending",
-    date: "2024-01-12",
-    shippingAddress: "321 Elm St, Houston, TX 77001",
+    date: "2025-01-12",
+    shippingAddress: "321 Okhla Enclave, Delhi, New Delhi 77001",
   },
   {
     id: "ORD-005",
-    customer: "David Brown",
-    email: "david@example.com",
+    customer: "Dipti ",
+    email: "dipti@example.com",
     products: ["Gaming Mouse", "Mouse Pad"],
-    total: 79.98,
+    total: 799,
     status: "Cancelled",
     date: "2024-01-11",
-    shippingAddress: "654 Maple Dr, Phoenix, AZ 85001",
+    shippingAddress: "654 Maple Road, Pune, Maharashtra 85001",
   },
 ]
 
@@ -215,7 +215,7 @@ export default function OrdersPage() {
                         )}
                       </div>
                     </TableCell>
-                    <TableCell className="font-medium">${order.total}</TableCell>
+                    <TableCell className="font-medium">Rs {order.total}</TableCell>
                     <TableCell>
                       <Badge variant={getStatusBadgeVariant(order.status)}>{order.status}</Badge>
                     </TableCell>

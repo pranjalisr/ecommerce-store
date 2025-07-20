@@ -79,7 +79,7 @@ const returnPolicies = [
 const returnableItems = [
   { item: "Smartphones & Tablets", returnable: true, note: "Must be in original condition" },
   { item: "Laptops & Computers", returnable: true, note: "Data must be wiped clean" },
-  { item: "Headphones & Audio", returnable: true, note: "Hygiene covers must be unused" },
+  { item: "Headphones & Audio", returnable: true, note: "Covers must be unused" },
   { item: "Smart Watches", returnable: true, note: "Must include all bands and chargers" },
   { item: "Cables & Accessories", returnable: true, note: "Packaging must be unopened" },
   { item: "Software & Digital Products", returnable: false, note: "Non-returnable once activated" },
@@ -209,11 +209,11 @@ export default function ReturnsPage() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="orderNumber">Order Number</Label>
-                    <Input id="orderNumber" placeholder="ORD-123456" />
+                    <Input id="orderNumber" placeholder="ORDER-123456" />
                   </div>
                   <div>
                     <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" type="email" placeholder="your@email.com" />
+                    <Input id="email" type="email" placeholder="mail@email.com" />
                   </div>
                 </div>
 

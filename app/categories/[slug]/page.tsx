@@ -7,7 +7,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Badge } from "@/components/ui/badge"
 import { ShoppingCart, Star } from "lucide-react"
 
-// Mock data - in real app this would come from database
+// Mock data
 const categoryData = {
   electronics: {
     name: "Electronics",
@@ -16,8 +16,8 @@ const categoryData = {
       {
         id: 2,
         name: "Smart Watch",
-        price: 199.99,
-        originalPrice: 249.99,
+        price: 29199.99,
+        originalPrice: 31249.99,
         emoji: "⌚",
         image: "/placeholder.svg?height=300&width=300",
         rating: 4.8,
@@ -33,8 +33,8 @@ const categoryData = {
       {
         id: 1,
         name: "AirPods Pro Max",
-        price: 549,
-        originalPrice: 599,
+        price: 1549,
+        originalPrice: 1599,
         emoji: "🎧",
         image: "/placeholder.svg?height=300&width=300",
         rating: 4.8,
@@ -44,8 +44,8 @@ const categoryData = {
       {
         id: 4,
         name: "Sony WH-1000XM5",
-        price: 399,
-        originalPrice: 449,
+        price: 1399,
+        originalPrice: 1449,
         emoji: "🎵",
         image: "/placeholder.svg?height=300&width=300",
         rating: 4.6,
@@ -61,8 +61,8 @@ const categoryData = {
       {
         id: 3,
         name: "Laptop Stand",
-        price: 49.99,
-        originalPrice: 69.99,
+        price: 149.99,
+        originalPrice: 169.99,
         emoji: "🖥️",
         image: "/placeholder.svg?height=300&width=300",
         rating: 4.3,
@@ -152,13 +152,13 @@ export default function CategoryPage() {
                   <span className="text-sm text-gray-600 ml-2">({product.reviews})</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl font-bold text-green-600">${product.price}</span>
-                  <span className="text-sm text-gray-500 line-through">${product.originalPrice}</span>
+                  <span className="text-2xl font-bold text-green-600">{product.price}</span>
+                  <span className="text-sm text-gray-500 line-through">{product.originalPrice}</span>
                 </div>
               </CardContent>
               <CardFooter className="p-4 pt-0 space-y-2">
                 <Button className="w-full" asChild>
-                  <Link href={`/products/${product.id}`}>View Details</Link>
+                  <Link href={`/products/{product.id}`}>View Details</Link>
                 </Button>
                 <Button variant="outline" className="w-full bg-transparent">
                   <ShoppingCart className="w-4 h-4 mr-2" />

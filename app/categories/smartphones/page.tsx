@@ -173,13 +173,13 @@ export default function SmartphonesPage() {
                 <p className="text-gray-600 text-sm mb-4">{product.description}</p>
 
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="text-2xl font-bold text-gray-900">${product.price}</span>
+                  <span className="text-2xl font-bold text-gray-900">{product.price}</span>
                   {product.originalPrice > product.price && (
-                    <span className="text-sm text-gray-500 line-through">${product.originalPrice}</span>
+                    <span className="text-sm text-gray-500 line-through">{product.originalPrice}</span>
                   )}
                   {product.originalPrice > product.price && (
                     <Badge variant="destructive" className="text-xs">
-                      Save ${product.originalPrice - product.price}
+                      Save {product.originalPrice - product.price}
                     </Badge>
                   )}
                 </div>
@@ -191,7 +191,7 @@ export default function SmartphonesPage() {
               </CardContent>
               <CardFooter className="p-6 pt-0 space-y-2">
                 <Button className="w-full bg-indigo-600 hover:bg-indigo-700" asChild>
-                  <Link href={`/products/${product.id}`}>View Details</Link>
+                  <Link href={`/products/{product.id}`}>View Details</Link>
                 </Button>
                 <Button
                   variant="outline"

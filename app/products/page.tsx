@@ -106,10 +106,10 @@ const products = [
 const categories = ["all", "smartphones", "audio", "computing", "gaming"]
 const brands = ["all", "Apple", "Samsung", "Sony", "Dell", "Microsoft"]
 const priceRanges = [
-  { label: "Under $500", min: 0, max: 500 },
-  { label: "$500 - $1000", min: 500, max: 1000 },
-  { label: "$1000 - $2000", min: 1000, max: 2000 },
-  { label: "Over $2000", min: 2000, max: Number.POSITIVE_INFINITY },
+  { label: "Under 500", min: 0, max: 500 },
+  { label: "500 - 1000", min: 500, max: 1000 },
+  { label: "1000 - 2000", min: 1000, max: 2000 },
+  { label: "Over 2000", min: 2000, max: Number.POSITIVE_INFINITY },
 ]
 
 export default function ProductsPage() {
@@ -385,13 +385,13 @@ export default function ProductsPage() {
                       <p className="text-gray-600 text-sm mb-3">{product.description}</p>
 
                       <div className="flex items-center gap-2 mb-4">
-                        <span className="text-2xl font-bold text-gray-900">${product.price}</span>
+                        <span className="text-2xl font-bold text-gray-900">{product.price}</span>
                         {product.originalPrice > product.price && (
-                          <span className="text-sm text-gray-500 line-through">${product.originalPrice}</span>
+                          <span className="text-sm text-gray-500 line-through">{product.originalPrice}</span>
                         )}
                         {product.originalPrice > product.price && (
                           <Badge variant="destructive" className="text-xs">
-                            Save ${product.originalPrice - product.price}
+                            Save {product.originalPrice - product.price}
                           </Badge>
                         )}
                       </div>

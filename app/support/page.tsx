@@ -64,7 +64,7 @@ const faqs = [
   {
     question: "How long does shipping take?",
     answer:
-      "Standard shipping takes 3-5 business days. Express shipping is available for 1-2 day delivery. Free shipping is included on orders over $50.",
+      "Standard shipping takes 3-5 business days. Express shipping is available for 1-2 day delivery. Free shipping is included on orders over Rs 50.",
   },
   {
     question: "What is your return policy?",
@@ -84,7 +84,7 @@ const faqs = [
   {
     question: "What payment methods do you accept?",
     answer:
-      "We accept all major credit cards, PayPal, Apple Pay, Google Pay, and buy-now-pay-later options like Klarna and Afterpay.",
+      "We accept all major credit cards, PayPal, Apple Pay, Google Pay, and buy now pay later options like Klarna and Afterpay.",
   },
 ]
 
@@ -214,7 +214,7 @@ export default function SupportPage() {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <Input type="email" placeholder="your@email.com" />
+                    <Input type="email" placeholder="yourmail@email.com" />
                   </div>
                 </div>
                 <div>

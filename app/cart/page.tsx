@@ -14,7 +14,7 @@ const initialCartItems = [
   {
     id: 1,
     name: "AirPods Pro Max",
-    price: 549,
+    price: 1549,
     quantity: 1,
     image: "/placeholder.svg?height=100&width=100",
     brand: "Apple",
@@ -23,7 +23,7 @@ const initialCartItems = [
   {
     id: 2,
     name: 'MacBook Pro 16"',
-    price: 2399,
+    price: 439999,
     quantity: 1,
     image: "/placeholder.svg?height=100&width=100",
     brand: "Apple",
@@ -32,7 +32,7 @@ const initialCartItems = [
   {
     id: 3,
     name: "iPhone 15 Pro",
-    price: 999,
+    price: 79999,
     quantity: 1,
     image: "/placeholder.svg?height=100&width=100",
     brand: "Apple",
@@ -168,8 +168,8 @@ export default function CartPage() {
                           </div>
 
                           <div className="text-right">
-                            <p className="font-bold text-gray-900">${(item.price * item.quantity).toFixed(2)}</p>
-                            <p className="text-sm text-gray-500">${item.price} each</p>
+                            <p className="font-bold text-gray-900">{(item.price * item.quantity).toFixed(2)}</p>
+                            <p className="text-sm text-gray-500">{item.price} each</p>
                           </div>
                         </div>
                       </div>
@@ -225,22 +225,22 @@ export default function CartPage() {
                 <div className="space-y-4 mb-6">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Subtotal</span>
-                    <span className="font-medium">${subtotal.toFixed(2)}</span>
+                    <span className="font-medium">{subtotal.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Shipping</span>
                     <span className="font-medium">
-                      {shipping === 0 ? <span className="text-green-600">Free</span> : `$${shipping.toFixed(2)}`}
+                      {shipping === 0 ? <span className="text-green-600">Free</span> : `{shipping.toFixed(2)}`}
                     </span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Tax</span>
-                    <span className="font-medium">${tax.toFixed(2)}</span>
+                    <span className="font-medium">{tax.toFixed(2)}</span>
                   </div>
                   {discount > 0 && (
                     <div className="flex justify-between text-green-600">
                       <span>Discount (SAVE10)</span>
-                      <span>-${discount.toFixed(2)}</span>
+                      <span>-{discount.toFixed(2)}</span>
                     </div>
                   )}
                 </div>
@@ -266,7 +266,7 @@ export default function CartPage() {
 
                 <div className="flex justify-between items-center mb-6">
                   <span className="text-lg font-bold text-gray-900">Total</span>
-                  <span className="text-2xl font-bold text-gray-900">${total.toFixed(2)}</span>
+                  <span className="text-2xl font-bold text-gray-900">{total.toFixed(2)}</span>
                 </div>
 
                 <Button className="w-full bg-indigo-600 hover:bg-indigo-700 text-lg py-3 mb-4" asChild>
@@ -279,7 +279,7 @@ export default function CartPage() {
 
                 {subtotal < 50 && (
                   <div className="mt-4 p-3 bg-blue-50 rounded-lg">
-                    <p className="text-sm text-blue-800">Add ${(50 - subtotal).toFixed(2)} more for free shipping!</p>
+                    <p className="text-sm text-blue-800">Add {(50 - subtotal).toFixed(2)} more for free shipping!</p>
                   </div>
                 )}
               </CardContent>
