@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Star, ShoppingCart, Heart } from "lucide-react"
+import { Star, ShoppingCart, Heart, Gamepad2, Headphones, Monitor, Zap } from "lucide-react"
 
 const gamingProducts = [
   {
@@ -17,6 +17,7 @@ const gamingProducts = [
     inStock: true,
     features: ["RGB Backlit", "Cherry MX Switches", "Anti-Ghosting"],
     category: "Keyboards",
+    icon: "⌨️",
   },
   {
     id: 2,
@@ -30,6 +31,7 @@ const gamingProducts = [
     inStock: true,
     features: ["25K DPI", "Wireless", "RGB Lighting"],
     category: "Mice",
+    icon: "🖱️",
   },
   {
     id: 3,
@@ -43,6 +45,7 @@ const gamingProducts = [
     inStock: true,
     features: ["7.1 Surround", "Noise Cancelling", "Detachable Mic"],
     category: "Audio",
+    icon: "🎧",
   },
   {
     id: 4,
@@ -56,6 +59,7 @@ const gamingProducts = [
     inStock: true,
     features: ["Customizable", "Hair Triggers", "Paddles"],
     category: "Controllers",
+    icon: "🎮",
   },
   {
     id: 5,
@@ -69,6 +73,7 @@ const gamingProducts = [
     inStock: false,
     features: ["144Hz", "1ms Response", "G-Sync"],
     category: "Monitors",
+    icon: "🖥️",
   },
   {
     id: 6,
@@ -82,51 +87,76 @@ const gamingProducts = [
     inStock: true,
     features: ["Ergonomic", "Memory Foam", "4D Armrests"],
     category: "Furniture",
+    icon: "🪑",
   },
 ]
 
 export default function GamingCategoryPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Breadcrumb */}
-      <div className="bg-white border-b">
+      <div className="bg-white/80 backdrop-blur-sm border-b border-gray-200/50">
         <div className="container mx-auto px-4 py-3">
           <nav className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-gray-900">
+            <Link href="/" className="hover:text-indigo-600 transition-colors">
               Home
             </Link>
-            <span>/</span>
-            <Link href="/categories" className="hover:text-gray-900">
+            <span className="text-gray-400">/</span>
+            <Link href="/categories" className="hover:text-indigo-600 transition-colors">
               Categories
             </Link>
-            <span>/</span>
-            <span className="text-gray-900 font-medium">Gaming</span>
+            <span className="text-gray-400">/</span>
+            <span className="text-indigo-600 font-medium">Gaming</span>
           </nav>
         </div>
       </div>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <div className="text-6xl mb-4">🎮</div>
-          <h1 className="text-4xl font-bold mb-4">Gaming Gear</h1>
-          <p className="text-xl max-w-2xl mx-auto">
-            Level up your gaming experience with professional-grade peripherals and accessories
+      <div className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=60 height=60 viewBox=0 0 60 60 xmlns=http://www.w3.org/2000/svg%3E%3Cg fill=none fillRule=evenodd%3E%3Cg fill=%23ffffff fillOpacity=0.05%3E%3Ccircle cx=30 cy=30 r=2/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full mb-6">
+            <Gamepad2 className="h-10 w-10 text-white" />
+          </div>
+          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            Gaming Gear
+          </h1>
+          <p className="text-xl max-w-2xl mx-auto text-blue-100 leading-relaxed">
+            Level up your gaming experience with professional-grade peripherals and accessories designed for champions
           </p>
+          <div className="flex items-center justify-center space-x-8 mt-8 text-sm">
+            <div className="flex items-center space-x-2">
+              <Zap className="h-5 w-5 text-yellow-300" />
+              <span>High Performance</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Monitor className="h-5 w-5 text-green-300" />
+              <span>Pro Gaming</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Headphones className="h-5 w-5 text-purple-300" />
+              <span>Immersive Audio</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-12">
         {/* Category Stats */}
-        <div className="mb-8">
-          <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold">Gaming Products ({gamingProducts.length})</h2>
+        <div className="mb-12">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">Gaming Products</h2>
+              <p className="text-gray-600">Discover {gamingProducts.length} premium gaming products</p>
+            </div>
             <div className="flex items-center space-x-4">
-              <select className="border rounded-lg px-3 py-2">
+              <select className="border border-gray-300 rounded-xl px-4 py-2 bg-white shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
                 <option>Sort by: Featured</option>
                 <option>Price: Low to High</option>
                 <option>Price: High to Low</option>
                 <option>Rating</option>
+                <option>Newest First</option>
               </select>
             </div>
           </div>
@@ -135,23 +165,30 @@ export default function GamingCategoryPage() {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {gamingProducts.map((product) => (
-            <Card key={product.id} className="group hover:shadow-lg transition-shadow">
+            <Card
+              key={product.id}
+              className="group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:-translate-y-1"
+            >
               <CardHeader className="p-0">
-                <div className="relative">
-                  <div className="w-full h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-t-lg flex items-center justify-center">
-                    <div className="text-6xl">🎮</div>
+                <div className="relative overflow-hidden">
+                  <div className="w-full h-64 bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50 rounded-t-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                    <div className="text-6xl filter drop-shadow-lg">{product.icon}</div>
                   </div>
                   {product.originalPrice > product.price && (
-                    <Badge className="absolute top-4 left-4 bg-red-500">
+                    <Badge className="absolute top-4 left-4 bg-gradient-to-r from-red-500 to-pink-500 text-white border-0 shadow-lg">
                       Save {Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}%
                     </Badge>
                   )}
-                  <Button size="sm" variant="outline" className="absolute top-4 right-4 bg-white">
-                    <Heart className="h-4 w-4" />
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm border-white/50 hover:bg-white hover:scale-110 transition-all duration-200"
+                  >
+                    <Heart className="h-4 w-4 text-gray-600" />
                   </Button>
                   {!product.inStock && (
-                    <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-t-lg">
-                      <Badge variant="destructive" className="text-lg px-4 py-2">
+                    <div className="absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center rounded-t-xl">
+                      <Badge variant="destructive" className="text-lg px-6 py-3 bg-red-500/90 backdrop-blur-sm">
                         Out of Stock
                       </Badge>
                     </div>
@@ -159,26 +196,30 @@ export default function GamingCategoryPage() {
                 </div>
               </CardHeader>
               <CardContent className="p-6">
-                <div className="mb-2">
-                  <Badge variant="outline" className="text-xs">
+                <div className="flex items-center justify-between mb-3">
+                  <Badge variant="outline" className="text-xs bg-indigo-50 text-indigo-700 border-indigo-200">
                     {product.category}
                   </Badge>
+                  <span className="text-xs text-gray-500 font-medium">{product.brand}</span>
                 </div>
-                <CardTitle className="text-lg mb-2 group-hover:text-purple-600 transition-colors">
+                <CardTitle className="text-lg mb-2 group-hover:text-indigo-600 transition-colors leading-tight">
                   <Link href={`/products/${product.id}`}>{product.name}</Link>
                 </CardTitle>
-                <p className="text-sm text-gray-600 mb-3">{product.brand}</p>
 
                 {/* Features */}
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-1">
                     {product.features.slice(0, 2).map((feature, index) => (
-                      <Badge key={index} variant="secondary" className="text-xs">
+                      <Badge
+                        key={index}
+                        variant="secondary"
+                        className="text-xs bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+                      >
                         {feature}
                       </Badge>
                     ))}
                     {product.features.length > 2 && (
-                      <Badge variant="secondary" className="text-xs">
+                      <Badge variant="secondary" className="text-xs bg-gray-100 text-gray-700">
                         +{product.features.length - 2} more
                       </Badge>
                     )}
@@ -186,7 +227,7 @@ export default function GamingCategoryPage() {
                 </div>
 
                 {/* Rating */}
-                <div className="flex items-center mb-3">
+                <div className="flex items-center mb-4">
                   <div className="flex items-center">
                     {[...Array(5)].map((_, i) => (
                       <Star
@@ -203,9 +244,11 @@ export default function GamingCategoryPage() {
                 </div>
 
                 {/* Price */}
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-6">
                   <div>
-                    <span className="text-2xl font-bold text-purple-600">{product.price}</span>
+                    <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                      {product.price}
+                    </span>
                     {product.originalPrice > product.price && (
                       <span className="ml-2 text-sm text-gray-500 line-through">{product.originalPrice}</span>
                     )}
@@ -213,13 +256,38 @@ export default function GamingCategoryPage() {
                 </div>
 
                 {/* Add to Cart Button */}
-                <Button className="w-full bg-purple-600 hover:bg-purple-700" disabled={!product.inStock}>
+                <Button
+                  className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
+                  disabled={!product.inStock}
+                >
                   <ShoppingCart className="h-4 w-4 mr-2" />
                   {product.inStock ? "Add to Cart" : "Out of Stock"}
                 </Button>
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Can't find what you're looking for?</h3>
+            <p className="text-indigo-100 mb-6">Browse our complete gaming collection or contact our gaming experts</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                variant="outline"
+                className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-indigo-600"
+              >
+                View All Products
+              </Button>
+              <Button
+                variant="outline"
+                className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-indigo-600"
+              >
+                Contact Expert
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
